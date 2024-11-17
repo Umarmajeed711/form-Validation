@@ -52,22 +52,23 @@ h1{
 }
 
 
-/* Eye Icon  set
+ /* Eye Icon  set */
 
 .password{
     display: inline-block;
     position: relative;
-    border: 1px solid black;
 }
 .password input {
-  padding: 10px 5px;
-  outline: none;
-  border: 0;
+   outline: none;
+  border: 2px solid #3b1a69 !important;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all .3s;
 }
 .pass-icon{
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 10px;
   width: 24px;
   cursor: pointer;
-} */
+} 

@@ -23,15 +23,17 @@
 
       <!-- Password -->
       <label for="password">
-        
         Password:
+        <div class="password">
+       
         <input
           type="password"
           id="password"
           onfocus="this.style.border = '1px solid black'"
-          class="input"
           required
         />
+        <img src="crossEye.png" alt="" onclick="pass()" class="pass-icon" id="pass-icon">
+      </div>
       </label>
       <br />
 
@@ -122,11 +124,37 @@
             throw "please select  the city name";
           }
 
+          // form submit message
           alert("form Submit");
+
+          // refresh the window
+          window.location.href = "file:///E:/Typescript%20code/Typescript/Javascript%20Topics/form%20validation%20assignment/index.html" 
         } catch (error) {
           alert(error);
         }
       };
+
+
+
+
+      // function for password show and hide
+      let a;
+        function pass(){
+            if(a == 1){
+                document.getElementById("password").type = "password";
+                document.getElementById("pass-icon").src = 'crossEye.png'
+            
+            a = 0;
+        }
+        else{
+             document.getElementById("password").type = "text";
+                document.getElementById("pass-icon").src = 'openEye.webp'
+                a= 1
+        }
+    }
+     
+
+      
 
     </script>
   </body>
