@@ -18,17 +18,19 @@
       <h1>Form Validation</h1>
 
       <!-- User Name -->
-      <label for="userName"> Name: <input type="text" id="userName"  class="input" onfocus="this.style.border = '1px solid black'"/>
+      <label for="userName"> Name: <input type="text" id="userName"  required class="input" onfocus="this.style.border = '1px solid black'"/>
       <br />
 
       <!-- Password -->
       <label for="password">
+        
         Password:
         <input
           type="password"
           id="password"
           onfocus="this.style.border = '1px solid black'"
           class="input"
+          required
         />
       </label>
       <br />
@@ -41,13 +43,13 @@
       <br />
 
       <!-- Email -->
-      <label for="email"> Email: <input type="email" id="email" class="input" onfocus="this.style.border = '1px solid black'" /> </label>
+      <label for="email"> Email: <input type="email" id="email" required class="input" onfocus="this.style.border = '1px solid black'" /> </label>
       <br />
 
       <!-- Cities -->
       <label for="city"  >
         City:
-        <select name="option" id="city" class="input" onfocus="this.style.border = '1px solid black'">
+        <select name="option" id="city" class="input" required onfocus="this.style.border = '1px solid black'">
           <option value="" selected>Select the city</option>
           <option value="Kar">Karachi</option>
           <option value="Hyd">Hyderabad</option>
