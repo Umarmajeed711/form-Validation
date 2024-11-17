@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Field with Show/Hide</title>
+    <style>
+        .password-container {
+            position: relative;
+            width: 250px;
+        }
+        .password-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .toggle-btn {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="password-container">
+    <input type="password" id="password" class="password-input" placeholder="Enter your password">
+    <span id="togglePassword" class="toggle-btn">👁</span>
+</div>
+
+<script>
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordField = document.getElementById("password");
+
+    togglePassword.addEventListener("click", function () {
+        // Toggle the input type between 'password' and 'text'
+        const type = passwordField.type === "password" ? "text" : "password";
+        passwordField.type = type;
+
+        // Toggle the eye icon (👁 for hidden, 👁‍🗨 for visible)
+        this.textContent = type === "password" ? "👁" : "👁‍🗨";
+    });
+</script>
+
+</body>
+</html>
